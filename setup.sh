@@ -22,7 +22,7 @@ docker run -d -p 11311:11311 talker-listener
 mv scapy-writer.service /etc/systemd/system
 systemctl daemon-reload
 systemctl start scapy-writer.service
-(crontab -l; echo "0 1 * * * /usr/bin/python3 /root/honeypot/remover.py") | crontab -
+(crontab -l; echo "0 1 * * * /usr/bin/python3 /root/ros-honeypot/remover.py") | crontab -
 
 # Add public SSH key to new cloud server to allow rsync access
 echo "Enter public SSH key: "
