@@ -8,7 +8,7 @@ LAST_RECEIVED = None
 COUNTER = 0
 
 def sniff_packets():
-    sniff(filter="port 11311", prn=process_packet, iface="enp1s0")
+    sniff(filter="port 11311", prn=process_packet, iface="docker0")
 
 def process_packet(packet):
     global LAST_RECEIVED, COUNTER
