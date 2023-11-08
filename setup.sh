@@ -6,11 +6,7 @@ echo "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/docke
 sudo apt update
 sudo apt install docker-ce git python3 python3-pip python3-venv -y
 
-
-# Clone ROS honeypot repo and start service
-git clone https://github.com/samderanova/ros-honeypot.git
-mv ros-honeypot honeypot
-cd honeypot
+# Create data to store PCAP files
 mkdir data
 
 # Install script dependencies
