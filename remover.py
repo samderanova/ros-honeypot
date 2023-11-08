@@ -2,7 +2,7 @@ from datetime import datetime, timedelta
 import os
 
 def remove_old_pcaps():
-    directory = os.path.join("/", "root", "honeypot", "data")
+    directory = os.path.join("/", "root", "ros-honeypot", "data")
     for filename in os.listdir(directory):
         f = os.path.join(directory, filename)
         if not os.path.isfile:

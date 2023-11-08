@@ -18,7 +18,7 @@ def process_packet(packet):
         COUNTER += 1
 
     ymd_date = now.strftime("%Y-%m-%d")
-    file_path = os.path.join("/", "root", "honeypot", "data", f"{ymd_date}.{COUNTER}.pcap")
+    file_path = os.path.join("/", "root", "ros-honeypot", "data", f"{ymd_date}.{COUNTER}.pcap")
     wrpcap(file_path, packet, append=os.path.isfile(file_path))
 
 
