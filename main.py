@@ -8,7 +8,7 @@ LAST_RECEIVED = None
 COUNTER = 0
 
 def sniff_packets(iface):
-    sniff(filter="port 11311", prn=process_packet, iface=iface)
+    sniff(filter="port 11311 or port 7400 or port 7401", prn=process_packet, iface=iface)
 
 def process_packet(packet):
     global LAST_RECEIVED, COUNTER
@@ -23,5 +23,5 @@ def process_packet(packet):
 
 
 if __name__ == "__main__":
-    sniff_packets("enp1s0")
+    sniff_packets("eth0")
 
